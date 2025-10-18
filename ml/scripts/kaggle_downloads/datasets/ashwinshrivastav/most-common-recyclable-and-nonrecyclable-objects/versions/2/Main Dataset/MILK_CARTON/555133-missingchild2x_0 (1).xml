@@ -1,0 +1,50 @@
+<annotation>
+	<folder>MILK_CARTON</folder>
+	<filename>555133-missingchild2x_0 (1).jpg</filename>
+	<path>C:\Users\ashwi\OneDrive - Troy School District\8th Grade\5 - Science and Engineering Explorations\Machine Learning Project\Main Dataset\MILK_CARTON\555133-missingchild2x_0 (1).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>473</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Milk_Carton</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>36</xmin>
+			<ymin>27</ymin>
+			<xmax>215</xmax>
+			<ymax>448</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Milk_Carton</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>208</xmin>
+			<ymin>29</ymin>
+			<xmax>396</xmax>
+			<ymax>447</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Milk_Carton</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>384</xmin>
+			<ymin>24</ymin>
+			<xmax>602</xmax>
+			<ymax>454</ymax>
+		</bndbox>
+	</object>
+</annotation>
