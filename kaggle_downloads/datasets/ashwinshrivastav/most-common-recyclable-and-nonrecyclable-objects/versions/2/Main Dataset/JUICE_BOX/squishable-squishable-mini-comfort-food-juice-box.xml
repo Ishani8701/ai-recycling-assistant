@@ -1,0 +1,26 @@
+<annotation>
+	<folder>63036fb3-0151-4903-9a45-f4b6feadcb37</folder>
+	<filename>squishable-squishable-mini-comfort-food-juice-box.jpg</filename>
+	<path>C:\Users\ashwi\Downloads\63036fb3-0151-4903-9a45-f4b6feadcb37\squishable-squishable-mini-comfort-food-juice-box.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>730</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Juice_Box</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>90</xmin>
+			<ymin>74</ymin>
+			<xmax>560</xmax>
+			<ymax>634</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JUICE_BOX</folder>
+	<filename>juice-box-solevita-oj-germany-01-e1438465344985-733x1024.jpg</filename>
+	<path>C:\Users\ashwi\OneDrive - Troy School District\8th Grade\5 - Science and Engineering Explorations\Machine Learning Project\Main Dataset\JUICE_BOX\juice-box-solevita-oj-germany-01-e1438465344985-733x1024.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>733</width>
+		<height>1024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Juice_Box</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>218</xmin>
+			<ymin>155</ymin>
+			<xmax>531</xmax>
+			<ymax>950</ymax>
+		</bndbox>
+	</object>
+</annotation>

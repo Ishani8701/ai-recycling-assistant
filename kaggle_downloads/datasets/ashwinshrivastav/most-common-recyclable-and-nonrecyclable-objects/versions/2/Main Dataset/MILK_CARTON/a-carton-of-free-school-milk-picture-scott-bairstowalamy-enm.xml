@@ -1,0 +1,38 @@
+<annotation>
+	<folder>MILK_CARTON</folder>
+	<filename>a-carton-of-free-school-milk-picture-scott-bairstowalamy-enm.jpg</filename>
+	<path>C:\Users\ashwi\OneDrive - Troy School District\8th Grade\5 - Science and Engineering Explorations\Machine Learning Project\Main Dataset\MILK_CARTON\a-carton-of-free-school-milk-picture-scott-bairstowalamy-enm.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Milk_Carton</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>76</xmin>
+			<ymin>109</ymin>
+			<xmax>262</xmax>
+			<ymax>417</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Milk_Carton</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>286</xmin>
+			<ymin>183</ymin>
+			<xmax>535</xmax>
+			<ymax>428</ymax>
+		</bndbox>
+	</object>
+</annotation>
