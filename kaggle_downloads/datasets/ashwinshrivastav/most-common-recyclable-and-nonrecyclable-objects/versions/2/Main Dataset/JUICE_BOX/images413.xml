@@ -1,0 +1,26 @@
+<annotation>
+	<folder>63036fb3-0151-4903-9a45-f4b6feadcb37</folder>
+	<filename>images413.jpg</filename>
+	<path>C:\Users\ashwi\Downloads\63036fb3-0151-4903-9a45-f4b6feadcb37\images413.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>300</width>
+		<height>168</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Juice_Box</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>147</xmin>
+			<ymin>94</ymin>
+			<xmax>190</xmax>
+			<ymax>168</ymax>
+		</bndbox>
+	</object>
+</annotation>
