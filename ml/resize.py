@@ -3,10 +3,10 @@ import os
 from pillow_heif import register_heif_opener
 register_heif_opener()
 
-tileImageFolder = ""
+tileImageFolder = "/Users/michaellee/Desktop/ai-recycling/ai-recycling-assistant/ml/Recyclable/Recyclable/plastic_bottles"
 tileImageDimension = 800
 
-smallTileImageFolder = ""
+smallTileImageFolder = "/Users/michaellee/Desktop/ai-recycling/ai-recycling-assistant/ml/Recyclable/Recyclable/plastic_bottles"
 os.makedirs(smallTileImageFolder, exist_ok=True)
 
 def isImageFile(path):
