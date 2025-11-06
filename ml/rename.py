@@ -2,7 +2,7 @@ import os
 
 def rename_images(folder_path, base_name, extension=".jpg"):
     # Get all files in the folder with the given extension
-    exts = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG"]
+    exts = [".jpg", ".jpeg", ".png", ".JPG", ".JPEG", ".PNG", ".webp", ".WEBP"]
     files = [f for f in os.listdir(folder_path) if os.path.splitext(f)[1].lower() in exts]
 
     # Sort files alphabetically (optional, keeps consistent ordering)
@@ -19,6 +19,6 @@ def rename_images(folder_path, base_name, extension=".jpg"):
 
 # Example usage
 if __name__ == "__main__":
-    folder_path = ""
-    base_name = ""
+    folder_path = "/Users/michaellee/Desktop/ai-recycling/ai-recycling-assistant/ml/Recyclable/Recyclable/plastic_bottles"
+    base_name = "Plastic Bottle"
     rename_images(folder_path, base_name)
