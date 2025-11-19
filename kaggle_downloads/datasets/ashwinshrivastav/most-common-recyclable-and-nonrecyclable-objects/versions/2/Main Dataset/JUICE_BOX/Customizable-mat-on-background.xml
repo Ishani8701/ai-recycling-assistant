@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JUICE_BOX</folder>
+	<filename>Customizable-mat-on-background.jpg</filename>
+	<path>C:\Users\ashwi\OneDrive - Troy School District\8th Grade\5 - Science and Engineering Explorations\Machine Learning Project\Main Dataset\JUICE_BOX\Customizable-mat-on-background.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1920</width>
+		<height>1262</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Juice_Box</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>443</xmin>
+			<ymin>587</ymin>
+			<xmax>1234</xmax>
+			<ymax>1215</ymax>
+		</bndbox>
+	</object>
+</annotation>

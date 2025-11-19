@@ -1,0 +1,50 @@
+<annotation>
+	<folder>BOTTLE</folder>
+	<filename>BOTTLE (408).png</filename>
+	<path>C:\Users\ashwi\OneDrive - Troy School District\8th Grade\5 - Science and Engineering Explorations\Machine Learning Project\Main Dataset\BOTTLE\BOTTLE (408).png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>247</width>
+		<height>177</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Bottle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>39</xmin>
+			<ymin>88</ymin>
+			<xmax>73</xmax>
+			<ymax>160</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Bottle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>97</xmin>
+			<ymin>32</ymin>
+			<xmax>142</xmax>
+			<ymax>160</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Bottle</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>168</xmin>
+			<ymin>17</ymin>
+			<xmax>207</xmax>
+			<ymax>161</ymax>
+		</bndbox>
+	</object>
+</annotation>

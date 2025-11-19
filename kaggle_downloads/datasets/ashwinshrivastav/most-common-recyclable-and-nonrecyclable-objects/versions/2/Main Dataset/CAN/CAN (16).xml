@@ -1,0 +1,38 @@
+<annotation>
+	<folder>CAN</folder>
+	<filename>CAN (16).jpg</filename>
+	<path>C:\Users\ashwi\OneDrive - Troy School District\8th Grade\5 - Science and Engineering Explorations\Machine Learning Project\Main Dataset\CAN\CAN (16).jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>214</width>
+		<height>205</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Can</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>11</xmin>
+			<ymin>9</ymin>
+			<xmax>113</xmax>
+			<ymax>194</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>Can</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>113</xmin>
+			<ymin>62</ymin>
+			<xmax>204</xmax>
+			<ymax>156</ymax>
+		</bndbox>
+	</object>
+</annotation>

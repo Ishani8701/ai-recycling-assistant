@@ -1,0 +1,26 @@
+<annotation>
+	<folder>JUICE_BOX</folder>
+	<filename>41862523821729-5636f820a4fa1.JPG</filename>
+	<path>C:\Users\ashwi\OneDrive - Troy School District\8th Grade\5 - Science and Engineering Explorations\Machine Learning Project\Main Dataset\JUICE_BOX\41862523821729-5636f820a4fa1.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1200</width>
+		<height>900</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Juice_Box</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>166</xmin>
+			<ymin>113</ymin>
+			<xmax>478</xmax>
+			<ymax>814</ymax>
+		</bndbox>
+	</object>
+</annotation>

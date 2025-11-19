@@ -1,0 +1,26 @@
+<annotation>
+	<folder>MILK_CARTON</folder>
+	<filename>1fe674454fda8ea0057d8b27721f9c76.jpg</filename>
+	<path>C:\Users\ashwi\OneDrive - Troy School District\8th Grade\5 - Science and Engineering Explorations\Machine Learning Project\Main Dataset\MILK_CARTON\1fe674454fda8ea0057d8b27721f9c76.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>860</width>
+		<height>1086</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Milk_Carton</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>50</xmin>
+			<ymin>52</ymin>
+			<xmax>837</xmax>
+			<ymax>1004</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,303 @@
+{
+  "model": "MobileNetV2 (ImageNet pretrained)",
+  "approach": "Zero-shot classification with keyword mapping",
+  "total_images": 14,
+  "correct": 12,
+  "accuracy": 0.8571428571428571,
+  "results": [
+    {
+      "image": "Bottle 40.jpg",
+      "top_prediction": "water_bottle",
+      "confidence": 0.6638614535331726,
+      "recyclable": true,
+      "category": "Recyclable",
+      "top_3": [
+        [
+          "water_bottle",
+          0.6638614535331726
+        ],
+        [
+          "pop_bottle",
+          0.10769577324390411
+        ],
+        [
+          "nipple",
+          0.05824209749698639
+        ]
+      ]
+    },
+    {
+      "image": "Bottle 76.jpg",
+      "top_prediction": "water_bottle",
+      "confidence": 0.4127838909626007,
+      "recyclable": true,
+      "category": "Recyclable",
+      "top_3": [
+        [
+          "water_bottle",
+          0.4127838909626007
+        ],
+        [
+          "pop_bottle",
+          0.2292838990688324
+        ],
+        [
+          "beer_bottle",
+          0.03713854029774666
+        ]
+      ]
+    },
+    {
+      "image": "Bottle 69.jpg",
+      "top_prediction": "water_bottle",
+      "confidence": 0.4972350001335144,
+      "recyclable": true,
+      "category": "Recyclable",
+      "top_3": [
+        [
+          "water_bottle",
+          0.4972350001335144
+        ],
+        [
+          "punching_bag",
+          0.15951502323150635
+        ],
+        [
+          "pop_bottle",
+          0.052811261266469955
+        ]
+      ]
+    },
+    {
+      "image": "Can 23.jpg",
+      "top_prediction": "spotlight",
+      "confidence": 0.36179277300834656,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "spotlight",
+          0.36179277300834656
+        ],
+        [
+          "torch",
+          0.09079518914222717
+        ],
+        [
+          "whistle",
+          0.038564328104257584
+        ]
+      ]
+    },
+    {
+      "image": "Can 30.jpg",
+      "top_prediction": "oil_filter",
+      "confidence": 0.16714179515838623,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "oil_filter",
+          0.16714179515838623
+        ],
+        [
+          "barometer",
+          0.151209756731987
+        ],
+        [
+          "lens_cap",
+          0.07736588269472122
+        ]
+      ]
+    },
+    {
+      "image": "Can 42.jpg",
+      "top_prediction": "oil_filter",
+      "confidence": 0.18884147703647614,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "oil_filter",
+          0.18884147703647614
+        ],
+        [
+          "thimble",
+          0.16825807094573975
+        ],
+        [
+          "spotlight",
+          0.08609938621520996
+        ]
+      ]
+    },
+    {
+      "image": "Can 35.jpg",
+      "top_prediction": "lighter",
+      "confidence": 0.2578562796115875,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "lighter",
+          0.2578562796115875
+        ],
+        [
+          "hair_spray",
+          0.09541748464107513
+        ],
+        [
+          "oil_filter",
+          0.04696360230445862
+        ]
+      ]
+    },
+    {
+      "image": "Juice Box 8.jpg",
+      "top_prediction": "croquet_ball",
+      "confidence": 0.20332874357700348,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "croquet_ball",
+          0.20332874357700348
+        ],
+        [
+          "orange",
+          0.12178079038858414
+        ],
+        [
+          "packet",
+          0.10315874963998795
+        ]
+      ]
+    },
+    {
+      "image": "Juice Box 12.jpg",
+      "top_prediction": "vending_machine",
+      "confidence": 0.16817978024482727,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "vending_machine",
+          0.16817978024482727
+        ],
+        [
+          "slot",
+          0.05881689488887787
+        ],
+        [
+          "switch",
+          0.05647561699151993
+        ]
+      ]
+    },
+    {
+      "image": "Milk Carton 14.jpg",
+      "top_prediction": "eggnog",
+      "confidence": 0.7804516553878784,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "eggnog",
+          0.7804516553878784
+        ],
+        [
+          "packet",
+          0.048863526433706284
+        ],
+        [
+          "carton",
+          0.030074529349803925
+        ]
+      ]
+    },
+    {
+      "image": "Styrofoam 20.jpg",
+      "top_prediction": "tray",
+      "confidence": 0.11876921355724335,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "tray",
+          0.11876921355724335
+        ],
+        [
+          "mixing_bowl",
+          0.06276872009038925
+        ],
+        [
+          "loupe",
+          0.03793211653828621
+        ]
+      ]
+    },
+    {
+      "image": "Styrofoam 37.jpg",
+      "top_prediction": "tray",
+      "confidence": 0.09331892430782318,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "tray",
+          0.09331892430782318
+        ],
+        [
+          "honeycomb",
+          0.08129540830850601
+        ],
+        [
+          "loupe",
+          0.04461691901087761
+        ]
+      ]
+    },
+    {
+      "image": "Utensil 20.jpg",
+      "top_prediction": "maraca",
+      "confidence": 0.49995410442352295,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "maraca",
+          0.49995410442352295
+        ],
+        [
+          "ladle",
+          0.08118079602718353
+        ],
+        [
+          "wooden_spoon",
+          0.0799640566110611
+        ]
+      ]
+    },
+    {
+      "image": "Utensil 35.jpg",
+      "top_prediction": "spatula",
+      "confidence": 0.9773324728012085,
+      "recyclable": false,
+      "category": "Non-recyclable (Uncertain)",
+      "top_3": [
+        [
+          "spatula",
+          0.9773324728012085
+        ],
+        [
+          "paddle",
+          0.005953704006969929
+        ],
+        [
+          "ladle",
+          0.003361724317073822
+        ]
+      ]
+    }
+  ]
+}
