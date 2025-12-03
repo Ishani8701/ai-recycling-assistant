@@ -187,8 +187,8 @@ export default function ImageUploader() {
 
   const uploadImage = async () => {
     if (!fileToUpload) {
-      setUploadError("No image selected");
-      return;
+        setUploadError("No image selected");
+        return;
     }
     
     setUploading(true);
@@ -196,32 +196,31 @@ export default function ImageUploader() {
     setResultText(null);
 
     try {
-      const fd = new FormData();
-      fd.append("file", fileToUpload); // server expects field name "file"
-      console.log("uploading");
+        const fd = new FormData();
+        fd.append("file", fileToUpload);
 
-      const res = await fetch("http://localhost:8000/predict", {
-        method: "POST",
-        body: fd,
-      });
+        const res = await fetch("http://localhost:8000/predict", {
+            method: "POST",
+            body: fd,
+        });
 
-      if (!res.ok) {
-        console.log("error");
-        const text = await res.text();
-        throw new Error(`Server error: ${res.status} ${text}`);
-      }
-      
-      const json = await res.json();
-      // Expecting JSON like: { label: "recyclable", confidence: 0.85 }
-      setResultText(`Prediction: ${json.label}`);
-      console.log("Got response");
+        if (!res.ok) {
+            const text = await res.text();
+            throw new Error(`Server error: ${res.status} ${text}`);
+        }
+        
+        const json = await res.json();
+        const confidencePercent = (json.confidence * 100).toFixed(1);
+        setResultText(
+            `Prediction: ${json.label} (${confidencePercent}% confidence)`
+        );
     } catch (err: any) {
-      console.error("Upload error:", err);
-      setUploadError(err?.message || "Upload failed");
+        console.error("Upload error:", err);
+        setUploadError(err?.message || "Upload failed");
     } finally {
-      setUploading(false);
+        setUploading(false);
     }
-  };
+};
 
   return (
     <div className="flex flex-col items-center gap-4">

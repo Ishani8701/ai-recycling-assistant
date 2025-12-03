@@ -1,12 +1,27 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Dict
+import tempfile
+import os
+import sys
+from pathlib import Path
 
-app = FastAPI(title="Recyclable Object Detector API")
+# Add the project root to the Python path
+project_root = str(Path(__file__).parent.parent)
+if project_root not in sys.path:
+    sys.path.append(project_root)
 
+# Import our simple classifier
+from ml.simple_classifier import SimpleRecyclingClassifier
+
+app = FastAPI(title="Recycling Classifier API")
+
+# Initialize classifier
+classifier = SimpleRecyclingClassifier()
+
+# CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Next dev server
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -14,29 +29,33 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World. API is running."}
-
-
-
+    return {"message": "Recycling Classifier API is running"}
 
 @app.post("/predict")
 async def predict_image(file: UploadFile = File(...)):
     """
-    Accepts an uploaded image file (via multipart/form-data) 
-    and returns a mock prediction.
+    Accepts an image and returns if it's recyclable or not
     """
-
-    image_bytes = await file.read()
+    if not file.content_type.startswith('image/'):
+        raise HTTPException(400, "File must be an image")
     
-    print(f"Received file: {file.filename}")
-    print(f"File size: {len(image_bytes)} bytes")
-
-    # TODO: pass bytes to your model preprocessing/predict code
-    # Example placeholder:
-    # label, confidence = my_model_predict_from_bytes(contents)
-
-    # For now return a dummy response while wiring up:
-    label = "recyclable"
-    confidence = 0.85
-
-    return {"label": label, "confidence": confidence}
+    # Save uploaded file temporarily
+    with tempfile.NamedTemporaryFile(delete=False, suffix='.jpg') as temp_file:
+        content = await file.read()
+        temp_file.write(content)
+        temp_file_path = temp_file.name
+    
+    try:
+        # Get prediction
+        result = classifier.predict(temp_file_path)
+        return {
+            "label": result['label'],
+            "confidence": result['confidence'],
+            "is_recyclable": result['is_recyclable'],
+            "original_label": result['original_label']
+        }
+    except Exception as e:
+        raise HTTPException(500, f"Error processing image: {str(e)}")
+    finally:
+        if os.path.exists(temp_file_path):
+            os.remove(temp_file_path)
