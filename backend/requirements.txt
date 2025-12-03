@@ -1,0 +1,8 @@
+fastapi>=0.95.0
+uvicorn[standard]>=0.23.0
+python-multipart>=0.0.6
+aiofiles>=23.1.0
+pillow>=10.0.0
+numpy>=1.26.0
+# If you want the backend to load and serve the TensorFlow model directly, uncomment the line below
+# tensorflow>=2.14.0
