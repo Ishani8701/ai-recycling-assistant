@@ -46,25 +46,46 @@ class RecyclingClassifier:
         processed_img = self.preprocess_image(img_path)
         
         # Get predictions
-        predictions = self.model.predict(processed_img)
+        predictions = self.model.predict(processed_img, verbose=0)
         decoded_predictions = decode_predictions(predictions, top=5)[0]
         
-        # Convert predictions to readable format
+        # Convert predictions to readable format and calculate recyclable confidence
+        recyclable_confidence = 0.0
+        non_recyclable_confidence = 0.0
         preds = []
+        
         for _, label, score in decoded_predictions:
+            is_recyclable = self._is_recyclable(label)
+            if is_recyclable:
+                recyclable_confidence += score
+            else:
+                non_recyclable_confidence += score
+                
             preds.append({
                 'label': label,
                 'score': float(score),
-                'is_recyclable': self._is_recyclable(label)
+                'is_recyclable': is_recyclable
             })
         
-        # Get top prediction
-        top_pred = preds[0]
+        # Normalize confidences
+        total = recyclable_confidence + non_recyclable_confidence
+        if total > 0:
+            recyclable_confidence /= total
+            non_recyclable_confidence /= total
+        
+        # Determine final prediction
+        is_recyclable = recyclable_confidence >= non_recyclable_confidence
+        confidence = max(recyclable_confidence, non_recyclable_confidence)
+        label = 'recyclable' if is_recyclable else 'non-recyclable'
+        
+        # Get the top predicted class name for backward compatibility
+        top_prediction = preds[0]['label'] if preds else 'unknown'
         
         return {
-            'top_prediction': top_pred['label'],
-            'confidence': top_pred['score'],
-            'is_recyclable': top_pred['is_recyclable'],
+            'label': label,  # New format: 'recyclable' or 'non-recyclable'
+            'top_prediction': top_prediction,  # For backward compatibility
+            'confidence': float(confidence),
+            'is_recyclable': is_recyclable,
             'all_predictions': preds
         }
     
