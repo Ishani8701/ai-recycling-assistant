@@ -2,6 +2,8 @@
 
 import React, { useRef, useState, useEffect } from "react";
 
+type TabType = 'upload' | 'about';
+
 // ImageUploader component
 // Responsibilities:
 // - Provide a hidden file input to pick existing images from the device
@@ -16,6 +18,7 @@ export default function ImageUploader() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null); // offscreen canvas used to capture frames
 
   // Component state
+  const [activeTab, setActiveTab] = useState<TabType>('upload');
   const [preview, setPreview] = useState<string | null>(null); // data URL of selected/captured image
   const [cameraActive, setCameraActive] = useState(false); // whether to show camera UI
   const [stream, setStream] = useState<MediaStream | null>(null); // MediaStream from getUserMedia
@@ -223,7 +226,25 @@ export default function ImageUploader() {
 };
 
   return (
-    <div className="flex flex-col items-center gap-4">
+    <div className="w-full max-w-2xl mx-auto">
+      {/* Tabs */}
+      <div className="flex border-b border-gray-200 mb-6">
+        <button
+          onClick={() => setActiveTab('upload')}
+          className={`py-2 px-4 font-medium ${activeTab === 'upload' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
+        >
+          Upload & Predict
+        </button>
+        <button
+          onClick={() => setActiveTab('about')}
+          className={`py-2 px-4 font-medium ${activeTab === 'about' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-500 hover:text-gray-700'}`}
+        >
+          About Our Model
+        </button>
+      </div>
+
+      {activeTab === 'upload' ? (
+        <div className="flex flex-col items-center gap-4">
       {/* Hidden File Input: used for the "Select Photo" button */}
       <input
         type="file"
@@ -318,7 +339,50 @@ export default function ImageUploader() {
         <p className="text-gray-500">No image selected</p>
       )}
       {uploadError && <p className="text-red-500">{uploadError}</p>}
-      {resultText && <p className="text-blue-600 font-medium mt-2">{resultText}</p>}
+      {resultText && <p className="text-white font-bold mt-2 text-lg">{resultText}</p>}
+        </div>
+      ) : (
+        <div className="p-6 bg-gray-800 rounded-lg shadow-lg text-gray-200">
+          <h2 className="text-2xl font-bold mb-4">How Our Recycling AI Works</h2>
+          
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold mb-2">Tech Stack</h3>
+            <ul className="list-disc pl-5 space-y-2">
+              <li><span className="font-medium">Frontend:</span> Next.js (React)</li>
+              <li><span className="font-medium">Backend:</span> FastAPI (Python)</li>
+              <li><span className="font-medium">ML Framework:</span> TensorFlow</li>
+              <li><span className="font-medium">Models:</span> Ensemble of pre-trained models (MobileNetV2, ResNet50, EfficientNetB0, etc.)</li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold mb-2">How It Works</h3>
+            <ol className="list-decimal pl-5 space-y-3">
+              <li>You take a photo or upload an image of waste</li>
+              <li>The image is sent to our FastAPI backend</li>
+              <li>Our AI model analyzes the image using computer vision</li>
+              <li>The model classifies the waste into categories (Recyclable/Non-recyclable)</li>
+              <li>Results are sent back with confidence scores</li>
+            </ol>
+          </div>
+
+          <div className="bg-gray-700 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold mb-2">Model Performance</h3>
+            <p className="mb-2">Our ensemble model combines predictions from multiple state-of-the-art architectures:</p>
+            <ul className="grid grid-cols-2 gap-2">
+              <li>• MobileNetV2</li>
+              <li>• ResNet50</li>
+              <li>• EfficientNetB0</li>
+              <li>• InceptionV3</li>
+              <li>• VGG16</li>
+              <li>• DenseNet121</li>
+            </ul>
+            <p className="mt-3 text-sm text-gray-300">
+              The model was trained on a diverse dataset of waste items and achieves high accuracy in waste classification.
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
